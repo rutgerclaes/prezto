@@ -29,10 +29,16 @@ zstyle ':prezto:*:*' color 'yes'
 zstyle ':prezto:load' pmodule \
   'environment' \
   'terminal' \
+  'spectrum' \
+  'tmux' \
   'editor' \
   'history' \
+  'history-substring-search' \
   'directory' \
-  'spectrum' \
+  'fasd' \
+  'git' \
+  'homebrew' \
+  'osx' \
   'utility' \
   'completion' \
   'prompt'
@@ -57,13 +63,13 @@ zstyle ':prezto:load' pmodule \
 #
 
 # Set the key mapping style to 'emacs' or 'vi'.
-zstyle ':prezto:module:editor' key-bindings 'emacs'
+zstyle ':prezto:module:editor' key-bindings 'vi'
 
 # Auto convert .... to ../..
 # zstyle ':prezto:module:editor' dot-expansion 'yes'
 
 # Allow the zsh prompt context to be shown.
-#zstyle ':prezto:module:editor' ps-context 'yes'
+# zstyle ':prezto:module:editor' ps-context 'yes'
 
 #
 # Git
@@ -97,7 +103,7 @@ zstyle ':prezto:module:editor' key-bindings 'emacs'
 #
 
 # Set the keyword used by `mand` to open man pages in Dash.app
-# zstyle ':prezto:module:osx:man' dash-keyword 'manpages'
+zstyle ':prezto:module:osx:man' dash-keyword 'manpages'
 
 #
 # Pacman
@@ -118,7 +124,7 @@ zstyle ':prezto:module:prompt' theme 'sorin'
 # Set the working directory prompt display length.
 # By default, it is set to 'short'. Set it to 'long' (without '~' expansion)
 # for longer or 'full' (with '~' expansion) for even longer prompt display.
-# zstyle ':prezto:module:prompt' pwd-length 'short'
+zstyle ':prezto:module:prompt' pwd-length 'short'
 
 # Set the prompt to display the return code along with an indicator for non-zero
 # return codes. This is not supported by all prompts.
@@ -187,29 +193,30 @@ zstyle ':prezto:module:prompt' theme 'sorin'
 #
 
 # Auto set the tab and window titles.
-# zstyle ':prezto:module:terminal' auto-title 'yes'
+zstyle ':prezto:module:terminal' auto-title 'yes'
 
 # Set the window title format.
-# zstyle ':prezto:module:terminal:window-title' format '%n@%m: %s'
+zstyle ':prezto:module:terminal:window-title' format '%n@%m: %s'
 
 # Set the tab title format.
-# zstyle ':prezto:module:terminal:tab-title' format '%m: %s'
+zstyle ':prezto:module:terminal:tab-title' format '%m: %s'
 
 # Set the terminal multiplexer title format.
 # zstyle ':prezto:module:terminal:multiplexer-title' format '%s'
+zstyle ':prezto:module:terminal:multiplexer-title' format '%m: %s'
 
 #
 # Tmux
 #
 
 # Auto start a session when Zsh is launched in a local terminal.
-# zstyle ':prezto:module:tmux:auto-start' local 'yes'
+zstyle ':prezto:module:tmux:auto-start' local 'yes'
 
 # Auto start a session when Zsh is launched in a SSH connection.
 # zstyle ':prezto:module:tmux:auto-start' remote 'yes'
 
 # Integrate with iTerm2.
-# zstyle ':prezto:module:tmux:iterm' integrate 'yes'
+zstyle ':prezto:module:tmux:iterm' integrate 'yes'
 
 # Set the default session name:
 # zstyle ':prezto:module:tmux:session' name 'YOUR DEFAULT SESSION NAME'

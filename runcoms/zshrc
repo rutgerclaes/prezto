@@ -11,3 +11,10 @@ if [[ -s "${ZDOTDIR:-$HOME}/.zprezto/init.zsh" ]]; then
 fi
 
 # Customize to your needs...
+
+# Aliases
+alias brewup='brew update && brew upgrade && brew cleanup'
+alias sbta='sbt clean assembly'
+alias sbtat='sbt "set test in assembly := {}" clean assembly'
+
+export CLICOLOR=1
