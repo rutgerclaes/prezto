@@ -18,3 +18,7 @@ alias sbta='sbt clean assembly'
 alias sbtat='sbt "set test in assembly := {}" clean assembly'
 
 export CLICOLOR=1
+
+# Use gpg-agent
+export "GPG_TTY=$(tty)"
+export "SSH_AUTH_SOCK=${HOME}/.gnupg/S.gpg-agent.ssh"
